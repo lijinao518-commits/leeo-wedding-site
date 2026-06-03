@@ -1,0 +1,4 @@
+assets/real/
+.gh-device.json
+.gh-token.json
+preview-*.png

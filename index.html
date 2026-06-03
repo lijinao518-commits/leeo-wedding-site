@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEEO | Wedding Photography</title>
+    <meta
+      name="description"
+      content="LEEO 婚礼摄影作品主页，包含抓拍纪实与时尚婚礼作品集。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="LEEO wedding photography">
+      <a class="brand" href="#top" aria-label="回到首页">LEEO</a>
+      <nav class="nav" aria-label="作品分类">
+        <a href="#documentary">抓拍纪实</a>
+        <a href="#editorial">时尚婚礼</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Wedding Photography</p>
+          <h1 id="hero-title">LEEO</h1>
+          <p class="lead">把婚礼留给时间，把情绪留给影像。</p>
+          <p class="lead-en">Let time keep the day. Let images keep the feeling.</p>
+        </div>
+        <figure class="hero-media">
+          <img
+            src="assets/ui/hero.webp"
+            alt="LEEO 黑白婚礼摄影首屏作品"
+            loading="eager"
+          />
+        </figure>
+      </section>
+
+      <section class="intro" aria-label="品牌介绍">
+        <p>
+          LEEO 以克制、安静、贴近真实的方式记录婚礼。影像不急于解释，只保留人物、
+          光线与情绪在当下成立的样子。
+        </p>
+      </section>
+
+      <section class="categories" aria-label="作品风格分类">
+        <a class="category-card" href="#documentary">
+          <img src="assets/ui/documentary-cover.webp" alt="抓拍纪实婚礼作品" loading="lazy" />
+          <span class="category-index">01</span>
+          <span class="category-title">抓拍纪实</span>
+          <span class="category-en">Documentary</span>
+        </a>
+        <a class="category-card" href="#editorial">
+          <img src="assets/ui/editorial-cover.webp" alt="时尚婚礼作品" loading="lazy" />
+          <span class="category-index">02</span>
+          <span class="category-title">时尚婚礼</span>
+          <span class="category-en">Editorial Wedding</span>
+        </a>
+      </section>
+
+      <section id="documentary" class="album-section" aria-labelledby="documentary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Documentary</p>
+          <h2 id="documentary-title">抓拍纪实</h2>
+          <p>不打断，不预设，只靠近真实发生的瞬间。</p>
+          <p class="section-en">Unscripted moments, quietly observed.</p>
+        </div>
+        <div id="documentary-albums" class="album-grid" aria-label="抓拍纪实作品集"></div>
+      </section>
+
+      <section id="editorial" class="album-section" aria-labelledby="editorial-title">
+        <div class="section-heading">
+          <p class="eyebrow">Editorial Wedding</p>
+          <h2 id="editorial-title">时尚婚礼</h2>
+          <p>以编辑视角重塑婚礼现场，让仪式、人物与风格共同成立。</p>
+          <p class="section-en">An editorial eye for ceremony, presence, and style.</p>
+        </div>
+        <div id="editorial-albums" class="album-grid" aria-label="时尚婚礼作品集"></div>
+      </section>
+
+      <section class="closing" aria-label="LEEO 品牌收束">
+        <p class="closing-cn">
+          LEEO 记录的不只是婚礼，而是两个人在这一天被看见的样子。
+        </p>
+        <p class="closing-en">
+          LEEO documents not only the wedding, but the way two people are seen on this day.
+        </p>
+      </section>
+    </main>
+
+    <section id="album-view" class="album-view" hidden aria-live="polite">
+      <div class="album-bar">
+        <button id="album-close" class="text-button" type="button">返回作品集</button>
+        <div>
+          <p id="album-category" class="eyebrow"></p>
+          <h2 id="album-title"></h2>
+          <p id="album-count" class="album-count"></p>
+        </div>
+      </div>
+      <div id="photo-grid" class="photo-grid"></div>
+      <button id="load-more" class="load-more" type="button" hidden>继续加载更多</button>
+    </section>
+
+    <div id="lightbox" class="lightbox" hidden>
+      <button id="lightbox-close" class="icon-button" type="button" aria-label="关闭大图">×</button>
+      <button id="lightbox-prev" class="icon-button arrow prev" type="button" aria-label="上一张">‹</button>
+      <img id="lightbox-image" alt="" />
+      <button id="lightbox-next" class="icon-button arrow next" type="button" aria-label="下一张">›</button>
+      <p id="lightbox-index" class="lightbox-index"></p>
+    </div>
+
+    <script src="albums.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
